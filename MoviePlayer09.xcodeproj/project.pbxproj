@@ -20,6 +20,8 @@
 		B84DC57A14CEEE8100310461 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84DC55B14CEEE8100310461 /* Foundation.framework */; };
 		B84DC58214CEEE8100310461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B84DC58014CEEE8100310461 /* InfoPlist.strings */; };
 		B84DC58514CEEE8100310461 /* MoviePlayer09Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B84DC58414CEEE8100310461 /* MoviePlayer09Tests.m */; };
+		B84DC58F14CEEF6100310461 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84DC58E14CEEF6100310461 /* MediaPlayer.framework */; };
+		B84DC59114CEF24D00310461 /* scene_00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B84DC59014CEF24D00310461 /* scene_00.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +39,23 @@
 		B84DC55914CEEE8100310461 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B84DC55B14CEEE8100310461 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B84DC55D14CEEE8100310461 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B84DC56114CEEE8100310461 /* MoviePlayer09-Info.plist */ = {isa = PBXFileReference; path = "MoviePlayer09-Info.plist"; sourceTree = "<group>"; };
+		B84DC56114CEEE8100310461 /* MoviePlayer09-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoviePlayer09-Info.plist"; sourceTree = "<group>"; };
 		B84DC56314CEEE8100310461 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B84DC56514CEEE8100310461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B84DC56714CEEE8100310461 /* MoviePlayer09-Prefix.pch */ = {isa = PBXFileReference; path = "MoviePlayer09-Prefix.pch"; sourceTree = "<group>"; };
-		B84DC56814CEEE8100310461 /* movieAppDelegate.h */ = {isa = PBXFileReference; path = movieAppDelegate.h; sourceTree = "<group>"; };
+		B84DC56714CEEE8100310461 /* MoviePlayer09-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoviePlayer09-Prefix.pch"; sourceTree = "<group>"; };
+		B84DC56814CEEE8100310461 /* movieAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = movieAppDelegate.h; sourceTree = "<group>"; };
 		B84DC56914CEEE8100310461 /* movieAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = movieAppDelegate.m; sourceTree = "<group>"; };
-		B84DC56B14CEEE8100310461 /* movieViewController.h */ = {isa = PBXFileReference; path = movieViewController.h; sourceTree = "<group>"; };
+		B84DC56B14CEEE8100310461 /* movieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = movieViewController.h; sourceTree = "<group>"; };
 		B84DC56C14CEEE8100310461 /* movieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = movieViewController.m; sourceTree = "<group>"; };
 		B84DC56F14CEEE8100310461 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/movieViewController.xib; sourceTree = "<group>"; };
 		B84DC57614CEEE8100310461 /* MoviePlayer09Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviePlayer09Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84DC57714CEEE8100310461 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B84DC57F14CEEE8100310461 /* MoviePlayer09Tests-Info.plist */ = {isa = PBXFileReference; path = "MoviePlayer09Tests-Info.plist"; sourceTree = "<group>"; };
+		B84DC57F14CEEE8100310461 /* MoviePlayer09Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoviePlayer09Tests-Info.plist"; sourceTree = "<group>"; };
 		B84DC58114CEEE8100310461 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B84DC58314CEEE8100310461 /* MoviePlayer09Tests.h */ = {isa = PBXFileReference; path = MoviePlayer09Tests.h; sourceTree = "<group>"; };
+		B84DC58314CEEE8100310461 /* MoviePlayer09Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviePlayer09Tests.h; sourceTree = "<group>"; };
 		B84DC58414CEEE8100310461 /* MoviePlayer09Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviePlayer09Tests.m; sourceTree = "<group>"; };
+		B84DC58E14CEEF6100310461 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		B84DC59014CEF24D00310461 /* scene_00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene_00.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				B84DC55A14CEEE8100310461 /* UIKit.framework in Frameworks */,
 				B84DC55C14CEEE8100310461 /* Foundation.framework in Frameworks */,
 				B84DC55E14CEEE8100310461 /* CoreGraphics.framework in Frameworks */,
+				B84DC58F14CEEF6100310461 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,7 @@
 		B84DC55814CEEE8100310461 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B84DC58E14CEEF6100310461 /* MediaPlayer.framework */,
 				B84DC55914CEEE8100310461 /* UIKit.framework */,
 				B84DC55B14CEEE8100310461 /* Foundation.framework */,
 				B84DC55D14CEEE8100310461 /* CoreGraphics.framework */,
@@ -124,6 +130,7 @@
 		B84DC56014CEEE8100310461 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B84DC59014CEF24D00310461 /* scene_00.mp4 */,
 				B84DC56114CEEE8100310461 /* MoviePlayer09-Info.plist */,
 				B84DC56214CEEE8100310461 /* InfoPlist.strings */,
 				B84DC56514CEEE8100310461 /* main.m */,
@@ -223,6 +230,7 @@
 			files = (
 				B84DC56414CEEE8100310461 /* InfoPlist.strings in Resources */,
 				B84DC57014CEEE8100310461 /* movieViewController.xib in Resources */,
+				B84DC59114CEF24D00310461 /* scene_00.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +365,10 @@
 		B84DC58914CEEE8100310461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoviePlayer09/MoviePlayer09-Prefix.pch";
 				INFOPLIST_FILE = "MoviePlayer09/MoviePlayer09-Info.plist";
@@ -368,6 +380,10 @@
 		B84DC58A14CEEE8100310461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoviePlayer09/MoviePlayer09-Prefix.pch";
 				INFOPLIST_FILE = "MoviePlayer09/MoviePlayer09-Info.plist";

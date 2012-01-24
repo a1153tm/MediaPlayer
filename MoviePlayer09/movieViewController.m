@@ -9,11 +9,44 @@
 #import "movieViewController.h"
 
 @implementation movieViewController
+@synthesize moviePlayer;
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+-(void)playMovie
+{
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] 
+                                         pathForResource:@"scene_00" ofType:@"mp4"]];
+    moviePlayer =  [[MPMoviePlayerController alloc]
+                    initWithContentURL:url];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayer];
+    
+    moviePlayer.controlStyle = MPMovieControlStyleDefault;
+    moviePlayer.shouldAutoplay = YES;
+    [self.view addSubview:moviePlayer.view];
+    [moviePlayer setFullscreen:YES animated:YES];
+}
+
+- (void) moviePlayBackDidFinish:(NSNotification*)notification {
+    MPMoviePlayerController *player = [notification object];
+    [[NSNotificationCenter defaultCenter] 
+     removeObserver:self
+     name:MPMoviePlayerPlaybackDidFinishNotification
+     object:player];
+    
+    if ([player
+         respondsToSelector:@selector(setFullscreen:animated:)])
+    {
+        [player.view removeFromSuperview];
+    }
 }
 
 #pragma mark - View lifecycle

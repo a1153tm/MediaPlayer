@@ -19,8 +19,32 @@
 
 -(void)playMovie
 {
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] 
-                                         pathForResource:@"scene_00" ofType:@"mp4"]];
+    NSString *ifilepath = @"/Users/miyabetaiji/Desktop/MoviePlayer09/MoviePlayer09/testi.mp4";
+    
+    NSString *ofilepath = @"/Users/miyabetaiji/Desktop/MoviePlayer09/MoviePlayer09/testo.mp4";
+    NSUInteger size;
+
+    NSData *dat1 = [NSData dataWithContentsOfFile:ifilepath];
+    size = [dat1 length];
+    
+    unsigned char ibuff[size];
+    unsigned char obuff[size];
+        
+    [dat1 getBytes:ibuff];
+    
+    for (int i = 0; i < size; i++) {
+        obuff[i] = (ibuff[i] >> 2) | (ibuff[i] << 6);
+        // obuff[i] = ibuff[i];
+    }
+    
+    NSData *dat2 = [NSData alloc];  
+    [dat2 initWithBytes:obuff length:size];
+    [dat2 writeToFile:ofilepath atomically:YES];
+
+    //NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] 
+    //                                     pathForResource:@"testo" ofType:@"mp4"]];
+    NSURL *url = [NSURL fileURLWithPath:ofilepath];
+    
     moviePlayer =  [[MPMoviePlayerController alloc]
                     initWithContentURL:url];
     

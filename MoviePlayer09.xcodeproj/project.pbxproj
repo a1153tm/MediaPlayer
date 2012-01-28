@@ -21,7 +21,6 @@
 		B84DC58214CEEE8100310461 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B84DC58014CEEE8100310461 /* InfoPlist.strings */; };
 		B84DC58514CEEE8100310461 /* MoviePlayer09Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B84DC58414CEEE8100310461 /* MoviePlayer09Tests.m */; };
 		B84DC58F14CEEF6100310461 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84DC58E14CEEF6100310461 /* MediaPlayer.framework */; };
-		B84DC59114CEF24D00310461 /* scene_00.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B84DC59014CEF24D00310461 /* scene_00.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		B84DC58314CEEE8100310461 /* MoviePlayer09Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviePlayer09Tests.h; sourceTree = "<group>"; };
 		B84DC58414CEEE8100310461 /* MoviePlayer09Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviePlayer09Tests.m; sourceTree = "<group>"; };
 		B84DC58E14CEEF6100310461 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
-		B84DC59014CEF24D00310461 /* scene_00.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene_00.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +128,6 @@
 		B84DC56014CEEE8100310461 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B84DC59014CEF24D00310461 /* scene_00.mp4 */,
 				B84DC56114CEEE8100310461 /* MoviePlayer09-Info.plist */,
 				B84DC56214CEEE8100310461 /* InfoPlist.strings */,
 				B84DC56514CEEE8100310461 /* main.m */,
@@ -230,7 +227,6 @@
 			files = (
 				B84DC56414CEEE8100310461 /* InfoPlist.strings in Resources */,
 				B84DC57014CEEE8100310461 /* movieViewController.xib in Resources */,
-				B84DC59114CEF24D00310461 /* scene_00.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

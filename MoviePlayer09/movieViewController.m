@@ -7,6 +7,7 @@
 //
 
 #import "movieViewController.h"
+#import <Foundation/Foundation.h>
 
 @implementation movieViewController
 @synthesize moviePlayer;
@@ -17,30 +18,34 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(void)playMovie
+-(void)decode:(NSString*)ifilepath :(NSString*)ofilepath
 {
-    NSString *ifilepath = @"/Users/miyabetaiji/Desktop/MoviePlayer09/MoviePlayer09/testi.mp4";
-    
-    NSString *ofilepath = @"/Users/miyabetaiji/Desktop/MoviePlayer09/MoviePlayer09/testo.mp4";
+    NSData *idat = [NSData dataWithContentsOfFile:ifilepath];
+    NSData *odat= [NSData alloc];  
     NSUInteger size;
 
-    NSData *dat1 = [NSData dataWithContentsOfFile:ifilepath];
-    size = [dat1 length];
-    
+    size = [idat length];
     unsigned char ibuff[size];
     unsigned char obuff[size];
-        
-    [dat1 getBytes:ibuff];
-    
+
+    [idat getBytes:ibuff];
     for (int i = 0; i < size; i++) {
         obuff[i] = (ibuff[i] >> 2) | (ibuff[i] << 6);
-        // obuff[i] = ibuff[i];
     }
     
-    NSData *dat2 = [NSData alloc];  
-    [dat2 initWithBytes:obuff length:size];
-    [dat2 writeToFile:ofilepath atomically:YES];
+    [odat initWithBytes:obuff length:size];
+    [odat writeToFile:ofilepath atomically:YES];
+}
 
+-(void)playMovie
+{
+    NSString *ifilepath = [NSString stringWithFormat:@"%@/Documents/%@", NSHomeDirectory(), @"testi.mp4"];
+    NSString *ofilepath = [NSString stringWithFormat:@"%@/tmp/%@", NSHomeDirectory(), @"testo.mp4"];
+    NSLog(@"ifilepath=%@", ifilepath);
+    NSLog(@"ofilepath=%@", ofilepath);
+
+    [self decode:ifilepath :ofilepath];
+    
     //NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] 
     //                                     pathForResource:@"testo" ofType:@"mp4"]];
     NSURL *url = [NSURL fileURLWithPath:ofilepath];

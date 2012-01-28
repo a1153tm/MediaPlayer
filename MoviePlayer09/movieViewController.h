@@ -14,4 +14,5 @@
 }
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 -(IBAction) playMovie;
+-(void)decode:(NSString*)ifilepath:(NSString*)ofilepath;
 @end
